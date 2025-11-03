@@ -8,18 +8,22 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 public class HandlingBrowsers {
-    static WebDriver driver = new InternetExplorerDriver();
+    static WebDriver driver = null;
 
     public static WebDriver launchBrowser(String browserName) {
         switch (browserName) {
             case "Edge":
                 driver = new EdgeDriver();
+                break;
             case "Chrome":
                 driver = new ChromeDriver();
+                break;
             case "Firefox":
                 driver = new FirefoxDriver();
+                break;
             case "Safari":
                 driver = new SafariDriver();
+                break;
         }
         return driver;
     }
