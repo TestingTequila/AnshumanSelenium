@@ -10,7 +10,6 @@ import java.time.Duration;
 public class MyStore
 {
     WebDriver driver;
-
     public MyStore(WebDriver driver)
     {
         this.driver = driver;
