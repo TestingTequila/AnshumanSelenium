@@ -4,6 +4,7 @@ import datarepo.TCLevelData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class Reuse
 {
@@ -34,5 +35,26 @@ public class Reuse
         } else {
             return failureMessage;
         }
+    }
+
+    public void doDDLSelectByValue(By locator,String value)
+    {
+        WebElement  ddlList =driver.findElement(locator);
+        Select country = new Select(ddlList);
+        country.selectByValue(value);
+    }
+
+    public void doDDLSelectByVisibleText(By locator,String text)
+    {
+        WebElement  ddlList =driver.findElement(locator);
+        Select country = new Select(ddlList);
+        country.selectByVisibleText(text);
+    }
+
+    public void doDDLSelectByIndex(By locator,int index)
+    {
+        WebElement  ddlList =driver.findElement(locator);
+        Select country = new Select(ddlList);
+        country.selectByIndex(index);
     }
 }
