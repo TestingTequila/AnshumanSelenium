@@ -1,0 +1,41 @@
+Approaches:
+
+TDD[Test Driven Development]     -  (TestNg, Junit)Java, (MStest, Nunit)C#
+Test NG is about 3 A's:
+    @Annotations
+      -These are always used with methods
+      -They always starts with @
+      @BeforeSuite
+      @BeforeTest
+      @BeforeClass
+      @BeforeMethod  : This will be executed before every method with @Test annotation
+      @Test          : This is used to represent the Test Case
+      @AfterMethod  : This will be executed after every method with @Test annotation
+      @AfterClass
+      @AfterTest
+      @AfterSuite
+      ------------------------------------------
+      @Parameters
+      @DataProviders
+      -----------------------------------------
+
+    Attributes
+     -They are used along with @Annotations
+     -Priority
+     -Enabled
+     -TimeOut
+     -dependsOnMethods
+     -groups
+     -dependsOnGroups
+     -alwaysRun
+     -invocationCount
+
+    Assertions
+     -assertTrue
+     -assertFalse
+     -assertEquals
+     -assertNotEquals
+
+
+
+BDD[Behaviour Driven Development] - (Cucumber)Java, (specflow)C#, behave, JBehave
