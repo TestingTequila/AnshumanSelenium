@@ -18,7 +18,7 @@ public class AccountLogin {
     }
 
     public void enterEmail() {
-        reuse.doSendKeys(emailTextBox, TCLevelData.EMAIL_ID);
+        reuse.doSendKeys(emailTextBox, TCLevelData.INVALID_EMAIL_ID);
     }
 
     public void enterPassword() {

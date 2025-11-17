@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 public class Reuse
 {
@@ -27,14 +28,10 @@ public class Reuse
         inputTextBox.sendKeys(text);
     }
 
-    public String doValidatePageTitle(String expectedPageTitle, String successMessage, String failureMessage)
+    public void doValidatePageTitle(String expectedPageTitle, String successMessage, String failureMessage)
     {
         String pageTitle = driver.getTitle();
-        if (pageTitle.equals(expectedPageTitle)) {
-            return successMessage;
-        } else {
-            return failureMessage;
-        }
+        Assert.assertEquals(pageTitle, expectedPageTitle);
     }
 
     public void doDDLSelectByValue(By locator,String value)
